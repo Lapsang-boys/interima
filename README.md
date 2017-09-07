@@ -13,10 +13,9 @@
      "*8Nu.z*"                              "YP'                    ""                        ^Y"   ^Y'
 ```
 
---- 
-
-
 _"Boys, boys, boys" - Sabrina, about Lapsang Boys in 1987._ 
+
+_"Brez." - Tank 2016_
 
 ---
 
@@ -24,9 +23,8 @@ _"Boys, boys, boys" - Sabrina, about Lapsang Boys in 1987._
 
 A game which has, at the moment of writing, no design document. We will see where this game will take us, and where we will take it.
 
-_Keep it lapsang._
-
 ## Open in Unity
 
-Open Unity and choose the "Projects" tab, and then "Open". Then chose the interima folder. Voila.
+Open Unity and choose the "Projects" tab, and then "Open". Find and select the interima folder. Voila.
 
+_Keep it lapsang._
