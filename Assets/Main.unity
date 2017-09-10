@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2013604002}
-  m_IndirectSpecularColor: {r: 0.48396918, g: 0.5757184, b: 0.6801955, a: 1}
+  m_IndirectSpecularColor: {r: 0.48396164, g: 0.5757413, b: 0.68020034, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -351,6 +351,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &129570419 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+  m_PrefabInternal: {fileID: 129570418}
+--- !u!114 &129570420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 129570419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2dd92909dcd04a56a212fb680466bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caster: {fileID: 129570419}
 --- !u!1 &416289573
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,7 +5018,6 @@ GameObject:
   - component: {fileID: 1796860647}
   - component: {fileID: 1796860646}
   - component: {fileID: 1796860645}
-  - component: {fileID: 1796860644}
   - component: {fileID: 1796860649}
   - component: {fileID: 1796860650}
   m_Layer: 0
@@ -5012,13 +5027,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1796860644
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1796860643}
-  m_Enabled: 1
 --- !u!124 &1796860645
 Behaviour:
   m_ObjectHideFlags: 0
@@ -5105,7 +5113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 7ad5679944e96814283c4b20cf1b5c26, type: 2}
+  profile: {fileID: 0}
 --- !u!1001 &1811182011
 Prefab:
   m_ObjectHideFlags: 0
@@ -5248,6 +5256,20 @@ Light:
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
+  m_FalloffTable:
+    m_Table[0]: 0
+    m_Table[1]: 0
+    m_Table[2]: 0
+    m_Table[3]: 0
+    m_Table[4]: 0
+    m_Table[5]: 0
+    m_Table[6]: 0
+    m_Table[7]: 0
+    m_Table[8]: 0
+    m_Table[9]: 0
+    m_Table[10]: 0
+    m_Table[11]: 0
+    m_Table[12]: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
