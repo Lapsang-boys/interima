@@ -28,3 +28,4 @@ A game which has, at the moment of writing, no design document. We will see wher
 Open Unity and choose the "Projects" tab, and then "Open". Find and select the interima folder. Voila.
 
 _Keep it lapsang._
+
