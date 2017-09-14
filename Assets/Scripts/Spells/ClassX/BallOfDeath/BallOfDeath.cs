@@ -15,13 +15,14 @@ public class BallOfDeath : MonoBehaviour {
     }
 
     public void FireProjectile() {
+        // Postitions and directions required
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        // Postition derived from caster and direction derived from ray
         position = caster.transform.position;
-        Vector3 direction = Vector3.Normalize(ray.direction);
-
+        Vector3 direction = Vector3.Normalize(ray.direction); // Front
+        Quaternion particleOrientation = Quaternion.LookRotation(direction);
+        
         // Create a GameObject (the prefab assigned in the inspector) 
-        projectileBody = (GameObject)Instantiate(projectilePrefab, position, Quaternion.identity);
+        projectileBody = (GameObject)Instantiate(projectilePrefab, position, particleOrientation);
 
         // Attatch a spell info to the projectile
         SpellInfo si = projectileBody.AddComponent<SpellInfo>();
@@ -30,10 +31,14 @@ public class BallOfDeath : MonoBehaviour {
         // ---
         Debug.Log(si);
 
+        // TODO - answer if it would be possible to add an onimpact class to the projectila in the same way as we
+        // attatch the spellinfo class
+
         // Apply force to the rigid body of the game object
         Rigidbody rb = projectileBody.GetComponent<Rigidbody>();
-        rb.position += direction * 2;
-        rb.AddForce(direction * 1000);
+        //rb.useGravity = false;
+        rb.position += direction * 0.2f;
+        rb.AddForce(direction * 2000);
     }
 		
     void Update () {
