@@ -16,7 +16,8 @@ public class BallOfDeath : MonoBehaviour {
 
     public void FireProjectile() {
         // Postitions and directions required
-        Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         position = caster.transform.position;
         Vector3 direction = Vector3.Normalize(ray.direction); // Front
         Quaternion particleOrientation = Quaternion.LookRotation(direction);
