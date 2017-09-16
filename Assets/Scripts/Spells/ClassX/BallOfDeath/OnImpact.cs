@@ -7,9 +7,9 @@ public class OnImpact : MonoBehaviour {
     public GameObject onHitEffect;
     private Rigidbody rb;
 
-    private void Start() {
-        //Rigidbody rb = projectileBody.GetComponent<Rigidbody>();
-    }
+    //private void Start() {
+    //    Rigidbody rb = projectileBody.GetComponent<Rigidbody>();
+    //}
 
     public void OnCollisionEnter(Collision collision)
     {
@@ -35,6 +35,7 @@ public class OnImpact : MonoBehaviour {
     private void FixedUpdate() {
         // Need to fix a better reference instead of get componenet each fixed update
         projectileBody.transform.rotation = Quaternion.LookRotation(projectileBody.GetComponent<Rigidbody>().velocity);
+        //projectileBody.transform.rotation = Quaternion.LookRotation(rb.velocity);
         //projectileBody.GetComponent<Rigidbody>().AddForce(new Vector3(0, -7, 0));
 
         // TODO implement ttl timer and destroy
