@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BallOfDeath : MonoBehaviour {
-	Vector3 position;
+    // Spell parameters
+    private static float COOLDOWN = 5f;
+
+    //Other
 	public GameObject caster;
-    private Camera cam;
-    private GameObject projectileBody;
     public GameObject projectilePrefab;
+    private GameObject projectileBody;
+    private float cooldownLeft = 0f;
+    private bool oncooldown = false;
+    private Camera cam;
+    private Vector3 position;
 
     private void Awake() {
         // Camera used to get ray
@@ -17,7 +23,6 @@ public class BallOfDeath : MonoBehaviour {
     public void FireProjectile() {
         // Postitions and directions required
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-        //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         position = caster.transform.position;
         Vector3 direction = Vector3.Normalize(ray.direction); // Front
         Quaternion particleOrientation = Quaternion.LookRotation(direction);
@@ -44,8 +49,17 @@ public class BallOfDeath : MonoBehaviour {
 		
     void Update () {
         // Listen for input (left mouse button)
-		if (Input.GetMouseButtonDown(0)) {
-			FireProjectile ();
-		}
+        if (!oncooldown) {
+            if (Input.GetKeyDown(KeyCode.Alpha1)) {
+                FireProjectile();
+                oncooldown = true;
+                cooldownLeft = COOLDOWN;
+            }
+        } else {
+            cooldownLeft -= Time.deltaTime;
+            if (cooldownLeft <= 0f) {
+                oncooldown = false;
+            }
+        }
 	}
 }

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c243d72fa35cde4cbe5d67bb667bef3, type: 3}
+  m_Name: Test1
+  m_EditorClassIdentifier: 
+  abilityIcon: {fileID: 21300000, guid: 0c6271a290ef75b4c97d58746c86c5b8, type: 3}
+  coolDown: 3
+  COOLDOWN: 5
+  FORCE: 2000
+  projectilePrefab: {fileID: 1456597652012738, guid: a3edc667fa240b248a6b21de5b8cb8c9,
+    type: 2}
+  aName: New Ability
+  abilityIcon: {fileID: 21300000, guid: 0c6271a290ef75b4c97d58746c86c5b8, type: 3}
